@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Diff btw filter() and find() is 
+        // find() :- returns only first match in array.
+        // filter() :- returns all matches in array.
+        const empArr = [
+            { name: "king", age: 42 },
+            { name: "king", age: 32 },
+            { name: "king", age: 22 },
+            { name: "king", age: 62 },
+            { name: "king", age: 52 },
+            { name: "king", age: 28 },
+            { name: "king", age: 25 },
+        ]
+
+        const filterAge = empArr.filter((item)=> item.age>30);
+        console.log('Age using filter method: ',filterAge);
+
+        const findItem = empArr.find((item)=> item.age>30);
+        console.log("Age using find method: ",findItem);
+
+
+    </script>
+</body>
+</html>
