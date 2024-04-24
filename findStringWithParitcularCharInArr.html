@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "swamiu shubhamk londhedpd ";
+
+        //    let output = str.split(' ').filter((word)=>word.length >7).toString().split('').reverse().join('').split(',');
+        //    console.log(output);
+
+        //    let rev = '';
+        let temp = [];
+        let word = "";
+        for (let i = 0; i < str.length; i++) {
+            word += str[i];
+            // console.log(str[i])
+            if (str[i] == " ") {
+                if (word[word.length - 3] === 'p') {
+                   temp.push(word);
+                }
+
+                word = "";
+            }
+        }
+
+        console.log(temp);
+    </script>
+</body>
+
+</html>
