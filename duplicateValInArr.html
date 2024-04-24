@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script>
-          let arr = [1,2,3,5,6,2,1];
-        let duplicate = [];
-        for(let i = 0; i<arr.length; i++){
-            console.log(arr[i] = a)
-            if(arr.indexOf(arr[i]) != i){
-                duplicate.push(arr[i]);
-            }
-        }
+  </head>
 
-        console.log(duplicate);
+  <body>
+    <script>
+      // let arr = [1, 2, 3, 5, 6, 2, 1];
+      // let duplicate = [];
+      // for (let i = 0; i < arr.length; i++) {
+      //     console.log(arr[i] = a)
+      //     if (arr.indexOf(arr[i]) != i) {
+      //         duplicate.push(arr[i]);
+      //     }
+      // }
+
+      // console.log(duplicate);
+
+      let arr = [1, 2, 3, 5, 6, 2, 1];
+      let duplicate = [];
+
+      for (let i = 0; i < arr.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arr.length; j++) {
+          //console.log(arr[i],arr[j])
+          if (arr[i] == arr[j]) {
+            count++;
+            //  console.log('count',count);
+            if (count >= 2) {
+              //  console.log(arr[i],arr[j])
+              if (!duplicate.includes(arr[j])) {
+                duplicate.push(arr[j]);
+              }
+            }
+          }
+        }
+      }
+
+      console.log(duplicate);
     </script>
-</body>
+  </body>
 </html>
