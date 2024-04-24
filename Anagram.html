@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let str = prompt('Enter String1');
+        let str2 = prompt('Enter String2');
+        
+        let strlower = str.replace(/\s/g, '').toLowerCase();
+        let str2lower = str2.replace(/\s/g,'').toLowerCase();
+
+        let str1 = strlower.split('').sort().join('');
+        let str3 = str2lower.split('').sort().join('');
+
+        if(str1 === str3){
+          alert('This is Anagram Strings');
+        }else{
+            alert('This is not Anagram Strings');
+
+        }
+        
+        </script>
+</body>
+</html>
