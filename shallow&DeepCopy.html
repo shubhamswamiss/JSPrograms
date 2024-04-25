@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    
     <script>
         let obj = {
             name: 'abc',
@@ -21,11 +22,11 @@
 
         }
 
-        obj1 = { ...obj }; // Shallow Copy
+        obj1 = { ...obj }; // Shallow Copy - When we change in obj1 elements, elements are changed but nested element is not changed
 
         obj1.name = 'xyz';
         console.log("Shallow Copy: ", obj, obj1);
-        obj2 = JSON.parse(JSON.stringify(obj)); // Deep Copy
+        obj2 = JSON.parse(JSON.stringify(obj)); // Deep Copy - We Can Change Nested Element Using Deep Copy
 
         obj2.marks.Marathi = 100;
 
