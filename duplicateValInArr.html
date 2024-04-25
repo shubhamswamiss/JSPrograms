@@ -41,6 +41,11 @@
       }
 
       console.log(duplicate);
+
+      // Third Solution using filter method
+      const arrNum = [1,2,8,2,9,8,9];
+      const duplicate2 = arrNum.filter((ele,index,arr)=>arr.indexOf(ele)!= index);
+      console.log(duplicate2);
     </script>
   </body>
 </html>
