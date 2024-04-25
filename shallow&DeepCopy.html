@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            name: 'abc',
+            age: 24,
+            rollNo: 21,
+            marks: {
+                Marathi: 95,
+                Hindi: 80,
+                Maths: 100
+            }
+
+        }
+
+        obj1 = { ...obj }; // Shallow Copy
+
+        obj1.name = 'xyz';
+        console.log("Shallow Copy: ", obj, obj1);
+        obj2 = JSON.parse(JSON.stringify(obj)); // Deep Copy
+
+        obj2.marks.Marathi = 100;
+
+        console.log("Deep Copy:", obj, obj2);
+    </script>
+</body>
+
+</html>
