@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(()=>{
+         console.log("Hii");
+        },0);
+
+        let promise = new Promise((res,rej)=>{
+            if(0> -1){
+                res('Promise resolve');
+            }
+            rej('Promise rej');
+        })
+
+        promise.then((val)=>console.log(val)).catch((err)=>console.log(err))
+
+        console.log('Build Dya!!!!!!!');
+    </script>
+</body>
+</html>
