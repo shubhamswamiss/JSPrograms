@@ -7,10 +7,10 @@
 </head>
 <body>
     <script>
-        let arr = [5,13,12];
+        let arr = [5,4,3];
         function checkPaythagorean(){
            const sortedArr = arr.map((a)=>a*a).sort((a,b)=>a-b)
-        //    console.log(sortedArr);
+           console.log(sortedArr);
         if(sortedArr[2] === sortedArr[0] + sortedArr[1] ){
             console.log('This array is Paythagorean Triplate');
         }else{
