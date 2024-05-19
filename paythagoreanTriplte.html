@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="demo"></p>
     <script>
         let arr = [5,4,3];
         function checkPaythagorean(){
@@ -17,12 +18,18 @@
             console.log('This array is not Paythagorean Triplate');
 
         }
-          console.log( arr.sort((a,b)=>a-b))
+          console.log(arr.sort((a,b)=>a-b))
 
-        }
+        } 
 
         checkPaythagorean();
 
+        
+        let arr2 = [5,4,3];
+        const sortArr = arr2.map((a)=>a*a).sort((a,b)=>a-b)
+        console.log(sortArr);
+        let doc = document.getElementById('demo');
+        sortArr[2] === sortArr[0] + sortArr[1] ? doc.innerHTML = '<h1>This array is Paythagorean Triplate</h1>' :doc.innerHTML = '<h1>This array is not Paythagorean Triplate</h1>'
       
     </script>
 </body>
