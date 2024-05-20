@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Javascript program to swap two
+        // numbers without using temporary
+        // variable
+
+        let x = 10 , y = 15;
+        console.log(`Before Swapping : x = ${x}, y = ${y}`);
+
+        // Code to swap 'x' and 'y'
+
+        x = x + y; // 10 + 15 = 25
+        y = x - y; // 25 - 15 = 10
+        x = x - y; // 25 - 10 = 15
+
+        console.log(`After Swapping : x = ${x}, y = ${y}`);
+    </script>
+</body>
+
+</html>
