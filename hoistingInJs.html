@@ -18,7 +18,16 @@
         y = 6;
         element = document.getElementById('demo1');
         element.innerHTML = y;
+
+        // another example
+        console.log("hoisting of variable",a);     
+        var a = 6;
+        getName();
+        function getName(){
+            console.log("hoisting in js");
+        }
         
+
 
     </script>
 </body>
