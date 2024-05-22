@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p id="demo"></p>
     <p id="demo1"></p>
@@ -20,15 +22,31 @@
         element.innerHTML = y;
 
         // another example
-        console.log("hoisting of variable",a);     
-        var a = 6;
+        console.log("hoisting of variable with var keyword", b);   // undefined 
+        //  console.log("hoisting of variable with let keyword",a);  // Uncaught ReferenceError: Cannot access a before initialization
+
+        let a = 6;
+        var b = 7;
         getName();
-        function getName(){
+        function getName() {
             console.log("hoisting in js");
         }
-        
+
+        // arrow function and anonymus function treated as variable 
+        //  bar();
+        arrowfunction();
+        var bar = function () {
+            console.log("Example of hoisting function");
+        }
+
+        var arrowfunction = () => {
+            console.log("Hoistin of arrow function")
+        }
+
+
 
 
     </script>
 </body>
+
 </html>
