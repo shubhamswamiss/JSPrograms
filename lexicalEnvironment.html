@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* In JavaScript, a lexical environment is a fundamental concept that plays a crucial role in
+         the execution context and scope chain. It is essentially a structure that holds the identifiers
+        (variables, functions, etc.) and the specific environment in which these identifiers were declared. 
+        */
+    
+        function a(){
+          var b = 10;
+          c();
+
+          function c(){
+            console.log(b);
+          }
+        }
+
+        a();
+    </script>
+</body>
+
+</html>
