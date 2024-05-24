@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>              
+</head>
+<body>
+    <script>
+      /*
+       Uses of Closures
+       - Module Design Pattern
+       - Currying
+       - Function like once (function which called only onnce)
+       - memoize
+       - maintainting state in async world
+       - setTimeouts
+       - Iterators
+
+      */
+
+        function z(){
+            var b = 10;
+            function x(){
+                var a = 7;
+                function y(){
+                    console.log(a,b);
+                }
+                y();
+            }
+            x();
+        }
+        z();
+
+    </script>
+</body>
+</html>
