@@ -8,6 +8,7 @@
 <body>
     <script>
       /*
+       A function along with its lexical environment forms a closure.
        Function along with lexical scope bundle together.
        A closure in JavaScript is a powerful feature that allows a function to retain access 
        to its lexical scope even when the function is executed outside that scope. In simpler terms,
@@ -36,6 +37,20 @@
             x();
         }
         z();
+
+        function outest(){
+            var c = 20;
+            function outer(b){
+                function inner(){
+                    console.log(a,b,c)
+                }
+                let a = 10;
+                return inner;
+            }
+            return outer;
+        }
+
+        var close = outest()('Hello Js')()
 
     </script>
 </body>
