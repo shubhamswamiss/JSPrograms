@@ -52,16 +52,32 @@
           
         function calculator(num1,num2){
            let sum = num1 + num2;
-           display(result)
-          // return sum;
+            return sum;
 
         }
 
-        let result = calculator(5,2);
-        //  display(result);
+         let result = calculator(5,2);
+         display(result);
         
         // or let calculator function call the dispaly function
-         
+            
+        function myCalculator(num1,num2){
+            let sum = num1 + num2;
+            display(sum);
+        }
+
+        myCalculator(4,9);
+
+        /*
+        The problem with the first example above, is that you have to call two functions to display the result.
+
+        The problem with the second example, is that you cannot prevent the calculator function from displaying the result.
+
+        Now it is time to bring in a callback.
+        */
+
+        // JavaScript Callbacks
+        
     </script>
 </body>
 
