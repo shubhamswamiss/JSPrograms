@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="demo"></h3>
+    <script>
+        // JavaScript program to swap two variables
+
+        // take input from the users
+        let a = prompt("Enter the first variable: ");
+        let b = prompt("Enter the second variable: ");
+
+        // create a temporary variable
+        let temp;
+
+        // Swap Variables
+        temp = a;
+        a = b;
+        b = temp;
+
+        document.getElementById('demo').innerHTML = `The value of a and b after swapping : a = ${a} , b = ${b} `;
+
+    </script>
+</body>
+</html>

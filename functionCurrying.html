@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          Currying is a technique in functional programming where a function is transformed into a 
+          sequence of functions,each with single argument. Instead of taking multiple argument all at
+          once, a curried function takes them one at a time, returning a new function for each argument
+          until all arguments have been provided.This can help to create more reusable and modular 
+          code.
+
+        */
+
+        function add(a){
+            return function(b){
+                return function(c){
+                    return a+b+c;
+                }
+            }
+        }
+    
+       // one way
+       const addOne =  add(2);
+       const addTwo = addOne(3);
+       const addThree = addTwo(5);
+       console.log(addThree);
+     
+       // other way
+       console.log(add(1)(2)(3));   
+ 
+    </script>
+</body>
+</html>

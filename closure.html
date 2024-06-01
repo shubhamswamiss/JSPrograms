@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>              
+</head>
+<body>
+    <script>
+      /*
+       A function along with its lexical environment forms a closure.
+       Function along with lexical scope bundle together.
+       A closure in JavaScript is a powerful feature that allows a function to retain access 
+       to its lexical scope even when the function is executed outside that scope. In simpler terms,
+       a closure is created when a function is defined within another function and retains access to 
+       the variables of the outer function.
+       Uses of Closures
+       - Module Design Pattern
+       - Currying
+       - Function like once (function which called only onnce)
+       - memoize
+       - maintainting state in async world
+       - setTimeouts
+       - Iterators
+
+      */
+
+        function z(){
+            var b = 10;
+            function x(){
+                var a = 7;
+                function y(){
+                    console.log(a,b);
+                }
+                y();
+            }
+            x();
+        }
+        z();
+
+        function outest(){
+            var c = 20;
+            function outer(b){
+                function inner(){
+                    console.log(a,b,c)
+                }
+                let a = 10;
+                return inner;
+            }
+            return outer;
+        }
+
+        var close = outest()('Hello Js')()
+
+
+        function outerst3(){
+            var a = 20;
+            function outer(){
+                let b = 50;
+                function inner(){
+                  console.log(a, b)
+                }
+                 return  inner
+            }
+            return outer
+        }
+      let c =   outerst3()()();
+    </script>
+</body>
+</html>

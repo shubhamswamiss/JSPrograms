@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Javascript program to swap two
+        // numbers without using temporary
+        // variable
+
+        let x = 10 , y = 15;
+        console.log(`Before Swapping : x = ${x}, y = ${y}`);
+
+        // Code to swap 'x' and 'y'
+
+        x = x + y; // 10 + 15 = 25
+        y = x - y; // 25 - 15 = 10
+        x = x - y; // 25 - 10 = 15
+
+        // Multiplication and division can also be used for swapping.
+        
+        // x = x * y; // 10 * 15 = 150
+        // y = x / y; // 150 / 15 = 10
+        // x = x / y; // 150 / 10 = 15
+
+        // swap two numbers using Bitwise XOR Method:
+
+        // x = x ^ y;
+        // y = x ^ y;
+        // x = x ^ y;
+
+        console.log(`After Swapping : x = ${x}, y = ${y}`);
+    </script>
+</body>
+
+</html>
