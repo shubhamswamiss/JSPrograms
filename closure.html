@@ -65,6 +65,21 @@
             return outer
         }
       let c =   outerst3()()();
+
+
+      function outer5(){
+       var a = 20
+      function inner5(){
+       var b = 10 ;
+
+       console.log(a+b)
+      }
+      return inner5;
+
+      }
+
+      let demo = outer5();
+      demo();
     </script>
 </body>
 </html>
