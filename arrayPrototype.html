@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Question : Take one array and loop throught it's original properties.
+        // Adding extra property to the arrays prototype.
+        Array.prototype.extraProperty = 'someProperty';
+        const newArr = [1, 2, 3, 4, 5];
+
+        for (let i in newArr) {
+            // It included arrays extra prperty.
+            // console.log(i);
+
+            // Getting orignal properties.
+            if (newArr.hasOwnProperty(i)) {
+                console.log(i)
+            }
+        }
+    </script>
+</body>
+
+</html>
