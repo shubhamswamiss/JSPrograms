@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        const arrNum = [1,2,3,4,5,6,9,10];
+        const arrNum = [1, 2, 3, 4, 5, 6, 9, 10];
         const missArr = [];
         const missingArr = (arr) => {
-           const minVal = Math.min(...arr);
-           const maxVal = Math.max(...arr);
+            const minVal = Math.min(...arr);
+            const maxVal = Math.max(...arr);
 
-           for(let i=minVal;i<maxVal;i++){
-                if(arr.indexOf(i) < 0){
+            for (let i = minVal; i < maxVal; i++) {
+                console.log(arr.indexOf(i));
+                if (arr.indexOf(i) < 0) {
                     missArr.push(i);
                 }
-           }
-           return missArr;  
+            }
+            return missArr;
         }
         console.log(missingArr(arrNum));
     </script>
 </body>
+
 </html>
