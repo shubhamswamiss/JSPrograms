@@ -49,24 +49,24 @@
           Suppose you want to do a calculation, and then display the result.
           You could call a calculator function (myCalculator), save the result, and then call another function (myDisplayer) to display the result:
         */
-          
-        function calculator(num1,num2){
-           let sum = num1 + num2;
+
+        function calculator(num1, num2) {
+            let sum = num1 + num2;
             return sum;
 
         }
 
-         let result = calculator(5,2);
-         display(result);
-        
+        let result = calculator(5, 2);
+        display(result);
+
         // or let calculator function call the dispaly function
-            
-        function myCalculator(num1,num2){
+
+        function myCalculator(num1, num2) {
             let sum = num1 + num2;
             display(sum);
         }
 
-        myCalculator(4,9);
+        myCalculator(4, 9);
 
         /*
         The problem with the first example above, is that you have to call two functions to display the result.
@@ -77,7 +77,15 @@
         */
 
         // what is JavaScript Callbacks
+        // here y is tha callback function
+        function x(y) {
+            // console.log(y)
+            y();
+        }
 
+        x(function y() {
+            console.log('callback called')
+        })
 
     </script>
 </body>
