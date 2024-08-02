@@ -23,10 +23,16 @@
             console.log(`${this.firstName} ${this.lastName} from ${homeTown},${state}`);
         }
 
+        // Using call method we can do function borrowing , the 'call' method allows you to call 
+        // function with specified 'this' value and arguments provided.
         printFullName.call(name, "Pune", "Maharashtra");
 
+        // The apply() method is similar to the call() method, but it takes an array of arguments
+        // instead of individual arguments
         printFullName.apply(name, ['Pune', "Maharashtra"]);
 
+        // Bind method is looks exactly as call method but the only difference is instead of 
+        // calling method dirctly it binds the method with a object and returns the copy of that method.
         let bindEx = printFullName.bind(name2, "Mumbai", "Maharashtra");
         console.log("Bind Ex", bindEx);
         bindEx();
