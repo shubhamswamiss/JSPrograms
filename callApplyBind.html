@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = {
+            firstName: 'Shubham',
+            lastName: 'Swami'
+        }
+
+        let name2 = {
+            firstName: 'Akshay',
+            lastName: 'Saini'
+        }
+
+        let printFullName = function (homeTown, state) {
+            console.log(`${this.firstName} ${this.lastName} from ${homeTown},${state}`);
+        }
+
+        printFullName.call(name, "Pune", "Maharashtra");
+
+        printFullName.apply(name, ['Pune', "Maharashtra"]);
+
+        let bindEx = printFullName.bind(name2, "Mumbai", "Maharashtra");
+        console.log("Bind Ex", bindEx);
+        bindEx();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
