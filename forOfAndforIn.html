@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for in loop work with keys 
+        const obj = {
+            firstName: "Shubham",
+            lastName: "Swami",
+            address: "Pune",
+        }
+
+        const arr = [1, 2, 3];
+
+        // output = ["firstName","shubham","lastName","swami"]
+        const output = [];
+        for (let key in obj) {
+            console.log(`for in loop  i: ${obj[key]} `);
+            output.push(key, obj[key]);
+            console.log("arr", output);
+        }
+
+        // for of loop work with values
+
+        for (let value of arr) {
+            console.log(`for of loop Value: ${value}`);
+        }
+
+    </script>
+</body>
+
+</html>
